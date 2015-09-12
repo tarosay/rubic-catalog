@@ -13,7 +13,7 @@ Ext.define("Hardware.GPI", {
 
   /**
    * @chainable
-   * 正論理に設定します。高い電位をon==assert、低い電位をoff==negateとして扱います。
+   * 正論理に設定します。高い電位をonやassert、低い電位をoffやnegateとして扱います。
    * ビット幅が1より大きい場合、全ビットの設定を変更します。
    */
   active_high: function() {},
@@ -24,8 +24,8 @@ Ext.define("Hardware.GPI", {
    * 正論理かどうかを取得します。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : 正論理。高い電位をon==assert、低い電位をoff==negateとして扱います。
-   * - false : 負論理。高い電位をoff==negate、低い電位をon==assertとして扱います。
+   * - true : 正論理。高い電位をonやassert、低い電位をoffやnegateとして扱います。
+   * - false : 負論理。高い電位をoffやnegate、低い電位をonやassertとして扱います。
    */
   is_active_high: true,
 
@@ -39,7 +39,7 @@ Ext.define("Hardware.GPI", {
 
   /**
    * @chainable
-   * 負論理に設定します。高い電位をoff==negate、低い電位をon==assertとして扱います。
+   * 負論理に設定します。高い電位をoffやnegate、低い電位をonやassertとして扱います。
    * この設定は #set, #clear, #high、#low、#value には影響しません。
    * ビット幅が1より大きい場合、全ビットの設定を変更します。
    */
@@ -51,8 +51,8 @@ Ext.define("Hardware.GPI", {
    * 負論理かどうかを取得します。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : 負論理。高い電位をoff==negate、低い電位をon==assertとして扱います。
-   * - false : 正論理。高い電位をon==assert、低い電位をoff==negateとして扱います。
+   * - true : 負論理。高い電位をoffやnegate、低い電位をonやassertとして扱います。
+   * - false : 正論理。高い電位をonやassert、低い電位をoffやnegateとして扱います。
    */
   is_active_low: false,
 
@@ -70,8 +70,8 @@ Ext.define("Hardware.GPI", {
    * 現在の入力レベルが高い電位であるかを取得します。正論理/負論理設定の影響を受けません。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : set (高い電位==high)
-   * - false : clear (低い電位==low)
+   * - true : setまたはhigh (高い電位)
+   * - false : clearまたはlow (低い電位)
    *
    * @localdoc このメンバは {@link #is_high} と同じです。
    */
@@ -91,8 +91,8 @@ Ext.define("Hardware.GPI", {
    * 現在の入力レベルが低い電位であるかを取得します。正論理/負論理設定の影響を受けません。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : clear (低い電位==low)
-   * - false : set (高い電位==high)
+   * - true : clearまたはlow (低い電位)
+   * - false : setまたはhigh (高い電位)
    *
    * @localdoc このメンバは {@link #is_low} と同じです。
    */
@@ -141,8 +141,8 @@ Ext.define("Hardware.GPI", {
    * 現在の入力レベルがon状態であるかを取得します。正論理/負論理設定の影響を受けます。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : set (正論理の場合は高い電位、負論理の場合は低い電位)
-   * - false : clear (正論理の場合は低い電位、負論理の場合は高い電位)
+   * - true : onまたはasserted (正論理の場合は高い電位、負論理の場合は低い電位)
+   * - false : offまたはnegated (正論理の場合は低い電位、負論理の場合は高い電位)
    *
    * @localdoc このメンバは {@link #is_asserted} と同じです。
    */
@@ -161,8 +161,8 @@ Ext.define("Hardware.GPI", {
    * 現在の入力レベルがoff状態であるかを取得します。正論理/負論理設定の影響を受けます。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
    *
-   * - true : clear (正論理の場合は低い電位、負論理の場合は高い電位)
-   * - false : set (正論理の場合は高い電位、負論理の場合は低い電位)
+   * - true : offまたはnegated (正論理の場合は低い電位、負論理の場合は高い電位)
+   * - false : onまたはasserted (正論理の場合は高い電位、負論理の場合は低い電位)
    *
    * @localdoc このメンバは {@link #is_negated} と同じです。
    */
@@ -207,7 +207,7 @@ Ext.define("Hardware.GPI", {
   "negated?": null,
 
   /**
-   * @type {Boolean}
+   * @type {Integer}
    * @readonly
    * 現在の入力レベルを整数値で取得します。整数値のnビット目が、入力ポートのnビット目に相当します。
    * 正論理/負論理設定は無視され、電位が高い場合は1、低い場合は0として取得されます。
@@ -345,7 +345,7 @@ Ext.define("Hardware.GPIO", {
   negate: function() {},
 
   /**
-   * @type {Boolean}
+   * @type {Integer}
    * 入出力レベルを整数値で取得/設定します。整数値のnビット目が、入出力ポートのnビット目に相当します。
    * 正論理/負論理設定は無視され、電位が高い場合は1、低い場合は0として取得/設定されます。
    * 取得時は、現在の入力レベルを取得します。
