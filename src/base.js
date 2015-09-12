@@ -1,26 +1,31 @@
 /**
  * @class String
  * @private
- * String
+ * String (Builtin class)
  */
+
 /**
  * @class Symbol
  * @private
- * Symbol
+ * Symbol (Builtin class)
  */
+
 /**
  * @class Integer
  * @private
- * Integer
+ * Integer (Builtin class)
  */
+
 /**
  * @class Boolean
  * @private
- * Boolean
+ * Boolean (Builtin class)
  */
+
 /**
  * @class Range
  * @private
- * Range
+ * Range (Builtin class)
  */
+
 /* vim: set et sts=2 sw=2: */

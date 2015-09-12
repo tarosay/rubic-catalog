@@ -1,3 +1,4 @@
+.signature .javascript { background-color: #d5ba31; }
 .signature .chainable { background-color: #00aa00 }
         .signature .deprecated {
           background-color: #aa0000;
@@ -99,7 +100,9 @@
           text-align: center;
           background-color: #eee;
         }
-#search-dropdown .icon-cfg { background-image: url(member-icons/cfg.png); background-repeat: no-repeat; }
+
+.signature .python { background-image: linear-gradient(#365d9c 6px, #ffd24a 6px); }
+.signature .ruby { background-color: #c7311d; }#search-dropdown .icon-cfg { background-image: url(member-icons/cfg.png); background-repeat: no-repeat; }
 .members .members-section .icon-cfg { background-image: url(member-icons/cfg.png); background-repeat: no-repeat; }
 .members .comments-section .icon-cfg { background-image: url(member-icons/cfg.png); background-repeat: no-repeat; }
 .class-overview .x-toolbar.member-links .icon-cfg { background-image: url(member-icons/cfg.png); background-repeat: no-repeat; }
@@ -123,4 +126,3 @@
 .members .members-section .icon-css_mixin { background-image: url(member-icons/css_mixin.png); background-repeat: no-repeat; }
 .members .comments-section .icon-css_mixin { background-image: url(member-icons/css_mixin.png); background-repeat: no-repeat; }
 .class-overview .x-toolbar.member-links .icon-css_mixin { background-image: url(member-icons/css_mixin.png); background-repeat: no-repeat; }
-.view-source { display: none; }

@@ -30,7 +30,7 @@ Ext.define("Hardware.GPI", {
   is_active_high: true,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_active_high
    * @localdoc このメンバは {@link #is_active_high} と同じです。
@@ -57,7 +57,7 @@ Ext.define("Hardware.GPI", {
   is_active_low: false,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_active_low
    * @localdoc このメンバは {@link #is_active_low} と同じです。
@@ -78,7 +78,7 @@ Ext.define("Hardware.GPI", {
   is_set: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_set
    * @localdoc このメンバは {@link #is_set} と同じです。
@@ -99,7 +99,7 @@ Ext.define("Hardware.GPI", {
   is_cleared: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_cleared
    * @localdoc このメンバは {@link #is_cleared} と同じです。
@@ -114,7 +114,7 @@ Ext.define("Hardware.GPI", {
   is_high: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_set
    * @localdoc このメンバは {@link #is_high} と同じです。
@@ -129,7 +129,7 @@ Ext.define("Hardware.GPI", {
   is_low: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_cleared
    * @localdoc このメンバは {@link #is_low} と同じです。
@@ -149,7 +149,7 @@ Ext.define("Hardware.GPI", {
   is_on: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_on
    * @localdoc このメンバは {@link #is_on} と同じです。
@@ -169,7 +169,7 @@ Ext.define("Hardware.GPI", {
   is_off: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_off
    * @localdoc このメンバは {@link #is_off} と同じです。
@@ -184,7 +184,7 @@ Ext.define("Hardware.GPI", {
   is_asserted: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_asserted
    * @localdoc このメンバは {@link #is_asserted} と同じです。
@@ -199,7 +199,7 @@ Ext.define("Hardware.GPI", {
   is_negated: null,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_off
    * @localdoc このメンバは {@link #is_negated} と同じです。
@@ -222,7 +222,7 @@ Ext.define("Hardware.GPI", {
   is_output_enabled: false,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_output_enabled
    * @localdoc このメンバは {@link #is_output_enabled} と同じです。
@@ -237,7 +237,7 @@ Ext.define("Hardware.GPI", {
   is_output_disabled: true,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_output_disabled
    * @localdoc このメンバは {@link #is_output_disabled} と同じです。
@@ -383,7 +383,7 @@ Ext.define("Hardware.GPIO", {
   is_output_enabled: false,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_output_enabled
    * @localdoc このメンバは {@link #is_output_enabled} と同じです。
@@ -413,7 +413,7 @@ Ext.define("Hardware.GPIO", {
   is_output_disabled: true,
 
   /**
-   * @since Ruby言語限定
+   * @ruby
    * @readonly
    * @inheritdoc #is_output_disabled
    * @localdoc このメンバは {@link #is_output_disabled} と同じです。
