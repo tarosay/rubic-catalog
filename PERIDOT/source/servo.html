@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Hardware-Servo'>/**
+</span> * PWM信号によるサーボモータコントローラを操作するクラスです。
+ */
+Ext.define(&quot;Hardware.Servo&quot;, {
+  extend: null,
+
+<span id='Hardware-Servo-method-configure'>  /**
+</span>   * @chainable
+   * ピン割り当てを行います。
+   *
+   * @param {String/Symbol/Integer} pin   PWM信号出力先の名称(例:&quot;D16&quot;)または番号(例:16)。
+   */
+  configure: function() {},
+
+<span id='Hardware-Servo-property-enabled'>  /**
+</span>   * @type {Boolean}
+   * 信号出力の有無を取得/設定します。
+   */
+  enabled: false,
+
+<span id='Hardware-Servo-property-position'>  /**
+</span>   * @type {Integer}
+   * ホーンのポジションを取得/設定します。0が左一杯、128が中央、255が右一杯を示します。
+   */
+  position: 128,
+
+<span id='Hardware-Servo-property-channel'>  /**
+</span>   * @type {Integer}
+   * @readonly
+   * このインスタンスが割り当てられたコントローラのチャンネル番号を取得します。
+   */
+  channel: null,
+
+});
+
+<span id='Peridot-Servo'>/**
+</span> * PWM信号によるサーボモータコントローラを操作するクラスです。
+ */
+Ext.define(&quot;Peridot.Servo&quot;, {
+  extend: &quot;Hardware.Servo&quot;,
+
+  statics: {
+<span id='Peridot-Servo-static-method-new'>    /**
+</span>     * インスタンスを生成します。olive構成では、生成できるインスタンスは最大30個です。
+     * 引数が渡された場合、それを用いて新しいインスタンスの #configure を呼び出します。
+     */
+    new: function() {},
+  },
+
+});
+
+/* vim: set et sts=2 sw=2: */
+</pre>
+</body>
+</html>
