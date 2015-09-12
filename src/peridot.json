@@ -21,6 +21,11 @@
         "classes": [
           "Peridot.Servo"
         ]
+      },
+      {
+        "name": "Internal",
+        "classes": [
+        ]
       }
     ]
   },

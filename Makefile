@@ -12,7 +12,8 @@ clean:
 
 PERIDOT/index.html: \
 	$(addprefix src/,base.js serial.js spimaster.js servo.js \
-		i2cmaster.js gpio.js peridot.js peridot.json tags.rb)
+		i2cmaster.js gpio.js peridot.js pfc.js \
+		peridot.json tags.rb)
 	jsduck --output=$(dir $@) --no-source \
 		--title="PERIDOT olive API documentation" \
 		$(addprefix --tags=,$(filter %.rb,$^)) \

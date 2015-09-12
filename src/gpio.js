@@ -46,7 +46,7 @@ Ext.define("Hardware.GPI", {
   active_low: function() {},
 
   /**
-   * @type {boolean}
+   * @type {Boolean}
    * @readonly
    * 負論理かどうかを取得します。
    * ビット幅が1より大きい場合は使用できません。使用するとエラーを発生させます。
@@ -186,7 +186,7 @@ Ext.define("Hardware.GPI", {
   /**
    * @ruby
    * @readonly
-   * @inheritdoc #is_asserted
+   * @inheritdoc #is_on
    * @localdoc このメンバは {@link #is_asserted} と同じです。
    */
   "asserted?": null,
