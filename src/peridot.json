@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Classes for PERIDOT olive",
+    "groups": [
+      {
+        "name": "Basic",
+        "classes": [
+          "Peridot"
+        ]
+      },
+      {
+        "name": "Communication",
+        "classes": [
+          "Peridot.I2CMaster",
+          "Peridot.SPIMaster",
+          "Peridot.Serial"
+        ]
+      },
+      {
+        "name": "Motion",
+        "classes": [
+          "Peridot.Servo"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hardware abstraction layer",
+    "groups": [
+      {
+        "name": "Input/Output",
+        "classes": [
+          "Hardware.GPI*"
+        ]
+      },
+      {
+        "name": "Communication",
+        "classes": [
+          "Hardware.I2CMaster",
+          "Hardware.SPIMaster",
+          "Hardware.Serial"
+        ]
+      },
+      {
+        "name": "Motion",
+        "classes": [
+          "Hardware.Servo"
+        ]
+      }
+    ]
+  }
+]
