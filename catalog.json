@@ -48,7 +48,10 @@
             "content": "kimu_shu"
           },
           "beta": true,
-          "obsolete": false
+          "obsolete": false,
+          "boardSpecific": {
+            "duktape": true
+          }
         },"revisions": [{
           "__class__": "FirmRevision",
           "id": "c7dedb6c-d63a-4dcd-a3c2-97c310003487",
