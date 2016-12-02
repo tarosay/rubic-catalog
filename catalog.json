@@ -34,6 +34,31 @@
             "rbf": "https://github.com/kimushu/rubic-catalog/raw/v0.1.x/PERIDOT/plain_plain_epcs4_auto.rpd"
           }
         }]
+      },{
+        "firmware": {
+          "__class__": "Firmware",
+          "id": "349c1e5e-5823-423d-872b-f63ad2b77285",
+          "friendlyName": {
+            "__class__": "I18n",
+            "content": "Duktape (alpha)"
+          },
+          "rubicVersion": ">= 0.9.3",
+          "author": {
+            "__class__": "I18n",
+            "content": "kimu_shu"
+          },
+          "beta": true,
+          "obsolete": false
+        },"revisions": [{
+          "__class__": "FirmRevision",
+          "id": "c7dedb6c-d63a-4dcd-a3c2-97c310003487",
+          "friendlyName": {"__class__": "I18n", "content": "v0.1.0 for OMMF2016"},
+          "rubicVersion": ">= 0.9.3",
+          "builderClasses": ["ES5Builder", "CoffeeScriptBuilder"],
+          "executables": [["^main\\.js$", "i"]],
+          "assets": {
+          }
+        }]
       }]
     }}
   ],[
